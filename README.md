@@ -20,7 +20,7 @@ $ composer require azjezz/http-normalizer
 
 > Normalize super globals : `$_GET`, `$_POST`, and `$_COOKIE` ... etc :
 
-```
+```hack
 $_GET = [
   'a' => ['b' => '4'],
   'c' => [0 => 4, 'c' => ['s' => ['f' => [0 => '3']]]],
@@ -44,7 +44,7 @@ $query = AzJezz\HttpNormalizer\normalize($_GET);
 
 > Normalize `$_FILES` super global :
 
-```
+```hack
 $_FILES = [
   'slide-shows' => [
     'tmp_name' => [
@@ -83,7 +83,7 @@ $files = AzJezz\HttpNormalizer\normalize_files($_FILES);
 
 > Parse http request body, query strings, cookie strings ... etc :
 
-```
+```hack
 $input = 'a=b&c[]=4&b=3&a[b]=4&c[c][s][f][]=3&foo[]=baz&foo[]=qux';
 $query = AzJezz\HttpNormalizer\parse($input);
 
@@ -103,4 +103,4 @@ $query = AzJezz\HttpNormalizer\parse($input);
 
 ## License
 
-The Http-normalizer Project is open-sourced software licensed under the MIT-licensed.
+The Http Normalizer Project is open-sourced software licensed under the MIT-licensed.
