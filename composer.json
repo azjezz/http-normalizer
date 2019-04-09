@@ -1,0 +1,19 @@
+{
+    "name": "azjezz/http-normalizer",
+    "type": "library",
+    "description": "f",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "azjezz",
+            "email": "azjezz@protonmail.com"
+        }
+    ],
+    "require": {
+        "hhvm/hhvm-autoload": "^2.0",
+        "hhvm/type-assert": "^3.3"
+    },
+    "require-dev": {
+        "hhvm/hhast": "^4.0"
+    }
+}

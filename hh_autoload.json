@@ -1,0 +1,7 @@
+{
+    "roots": [
+        "src/HttpNormalizer/"
+    ],
+    "rootsDev": [],
+    "devFailureHandler": "Facebook\\AutoloadMap\\HHClientFallbackHandler"
+}
