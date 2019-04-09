@@ -4,7 +4,6 @@ use namespace HH\Lib\Str;
 use namespace HH\Lib\Vec;
 use namespace HH\Lib\Dict;
 use namespace Facebook\TypeSpec;
-use namespace Facebook\TypeAssert;
 
 type FileStructure = shape(
   'tmp_name' => string,
