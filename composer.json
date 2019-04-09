@@ -1,7 +1,7 @@
 {
     "name": "azjezz/http-normalizer",
     "type": "library",
-    "description": "f",
+    "description": "Normalize Http super globals",
     "license": "MIT",
     "authors": [
         {
