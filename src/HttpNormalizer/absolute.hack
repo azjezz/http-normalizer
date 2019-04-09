@@ -2,7 +2,6 @@ namespace AzJezz\HttpNormalizer;
 
 use namespace HH\Lib\Str;
 use namespace HH\Lib\Vec;
-use namespace HH\Lib\Dict;
 use namespace Facebook\TypeSpec;
 
 type FileStructure = shape(
