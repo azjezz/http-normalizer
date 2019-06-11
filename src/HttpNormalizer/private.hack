@@ -73,7 +73,7 @@ final class FileNormalizer {
   private function matchesFileStructure(mixed $value): ?this::FileStructure {
     try {
       return TypeAssert\matches_type_structure(
-        \type_structure($this, 'FileStructure'),
+        type_structure($this, 'FileStructure'),
         $value,
       );
     } catch (TypeAssert\IncorrectTypeException $e) {
