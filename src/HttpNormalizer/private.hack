@@ -25,7 +25,7 @@ final class FileNormalizer {
   public function normalize(
     KeyedContainer<arraykey, mixed> $files,
     ?string $prefix = null,
-  ): KeyedContainer<string, this::FileStructure> {
+  ): dict<string, this::FileStructure> {
     $result = dict[];
     foreach ($files as $index => $file) {
       if ($prefix is nonnull) {
@@ -125,8 +125,9 @@ final class FileNormalizer {
     mixed $file,
   ): ?KeyedContainer<string, this::FileStructure> {
     try {
-      $files =
-        TypeSpec\dict(TypeSpec\string(), TypeSpec\mixed())->coerceType($file);
+      $files = TypeSpec\dict(TypeSpec\string(), TypeSpec\mixed())->coerceType(
+        $file,
+      );
       $spec = TypeSpec\dict(TypeSpec\arraykey(), TypeSpec\mixed());
       $nullableSpec = TypeSpec\nullable($spec);
       return $this->marshalUploadedFileTreeRecursively(

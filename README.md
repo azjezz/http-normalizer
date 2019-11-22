@@ -8,7 +8,7 @@ Normalize Http super globals.
 
 This package can be install with Composer.
 
-```
+```console
 $ composer require azjezz/http-normalizer
 ```
 
@@ -31,13 +31,13 @@ $_GET = [
 $query = AzJezz\HttpNormalizer\normalize($_GET);
 
 /**
- * vec [
- *   tuple("a[b]", "4"),
- *   tuple("c[0]", "4"),
- *   tuple("c[c][s][f][0]", "3"),
- *   tuple("b", "3"),
- *   tuple("foo[0]", "baz"),
- *   tuple("foo[1]", "qux"),
+ * dict [
+ *   "a[b]" => "4",
+ *   "c[0]" => "4",
+ *   "c[c][s][f][0]" => "3",
+ *   "b" => "3",
+ *   "foo[0]" => "baz",
+ *   "foo[1]" => "qux",
  * ]
  */
 ```
@@ -60,21 +60,21 @@ $_FILES = [
 $files = AzJezz\HttpNormalizer\normalize_files($_FILES);
 
 /**
- * vec [
- *   tuple("slide-shows[0][slides][0]", shape(
+ * dict [
+ *   "slide-shows[0][slides][0]" => shape(
  *     'tmp_name' => 'tmpfoo',
  *     'size' => 123,
  *     'error' => 0,
  *     'name' => 'foo.txt',
  *     'type' =>'text/plain',
- *   )),
- *   tuple("slide-shows[0][slides][1]", shape(
+ *   ),
+ *   "slide-shows[0][slides][1]" => shape(
  *     'tmp_name' => 'tmpbar',
  *     'size' => 200,
  *     'error' => 0,
  *     'name' => 'bar.txt',
  *     'type' =>'text/plain',
- *   )),
+ *   ),
  * ]
  */
 ```
@@ -89,12 +89,12 @@ $query = AzJezz\HttpNormalizer\parse($input);
 
 /**
  * vec [
- *   tuple("a[b]", "4"),
- *   tuple("c[0]", "4"),
- *   tuple("c[c][s][f][0]", "3"),
- *   tuple("b", "3"),
- *   tuple("foo[0]", "baz"),
- *   tuple("foo[1]", "qux"),
+ *   "a[b]" => "4",
+ *   "c[0]" => "4",
+ *   "c[c][s][f][0]" => "3",
+ *   "b" => "3",
+ *   "foo[0]" => "baz",
+ *   "foo[1]" => "qux",
  * ]
  */
 ```
