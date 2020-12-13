@@ -10,10 +10,10 @@
         }
     ],
     "require": {
-        "hhvm": "^4.25",
-        "hhvm/hsl": "^4.25",
-        "hhvm/hhvm-autoload": "^2.0|^3.0",
-        "hhvm/type-assert": "^3.6"
+        "hhvm": "^4.85",
+        "hhvm/hsl": "^4.41",
+        "hhvm/hhvm-autoload": "^3.0",
+        "hhvm/type-assert": "^4.1"
     },
     "require-dev": {
         "hhvm/hhast": "^4.0"
